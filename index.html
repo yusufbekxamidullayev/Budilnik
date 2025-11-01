@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budilnik</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+    <div class="bg-white rounded-lg shadow-md p-8 max-w-md w-full">
+        <header class="mb-6 text-center">
+            <h1 class="font-bold text-[40px]">Budilnik qo'yish</h1>
+        </header>
+
+        <main>
+            <form id="alarm" class="space-y-4 mb-4">
+                <label class="block text-gray-700 font-medium">
+                    Budilnik vaqti:
+                    <input type="time"
+                        class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400" />
+                </label>
+                <button type="submit"
+                    class="w-full py-3 px-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-md transition-colors duration-200">
+                    Budilnik qo'yish
+                </button>
+            </form>
+
+            <audio id="audio" controls class="w-full mb-4">
+                <source src="/media/morning-sun-morning-alarm-for-samsung-iphone-423087_4.mp3">
+            </audio>
+
+            <div class="flex space-x-4">
+                <button id="play-alarm"
+                    class="flex-1 py-2 px-4 bg-green-500 hover:bg-sky-600 text-white font-medium rounded-md transition-colors duration-200">
+                    Play
+                </button>
+                <button id="pause-alarm"
+                    class="flex-1 py-2 px-4 bg-red-500 hover:bg-red-600 text-white font-medium rounded-md transition-colors duration-200">
+                    Pause
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <script src="/js/main.js"></script>
+</body>
+
+</html>
+
+
